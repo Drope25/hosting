@@ -3,7 +3,7 @@ let formulario = document.forms['formulario'],
     minEstudio = tiempoEstudio,
     descansoCorto = formulario['tiempoDescansoCorto'].value - 1,
     descansoLargo = formulario['tiempoDescansoLargo'].value - 1,
-    segEstudio = 2,
+    segEstudio = 59,
     descanso = false,
     noSesion = 0,
     audio = new Audio('https://github.com/Drope25/hosting/blob/main/audio/alarma.wav'),
@@ -28,7 +28,7 @@ const mostrarRelojEstudio = () => {
         document.getElementById('estado').innerHTML = 'ESTUDIANDO';
     };
     if (segEstudio == 0) {
-        segEstudio = 2;
+        segEstudio = 59;
         if (minEstudio != 0) {
             --minEstudio;
         } else {
@@ -40,7 +40,7 @@ const mostrarRelojEstudio = () => {
                     segEstudio = 59;
                 } else {
                     minEstudio = descansoCorto;
-                    segEstudio = 2;
+                    segEstudio = 59;
                 };
                 document.getElementById('alarma').innerHTML = '<iframe src="audio/halloween_theme.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>';
                 descanso = true;
