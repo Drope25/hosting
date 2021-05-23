@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reloj digital</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+    <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+    <div id='reloj'>
+        <div class='reloj-contenedor' id='contenedor'>
+            <div id='estado'>
+                <form id="formulario">
+                    Tiempo de estudio: <input type="number" value=45 id="tiempoEstudio" onchange="minEstudio = formulario['tiempoEstudio'].value - 1;" />
+                    <br/> Tiempos de descanso: <br/>
+                    <div class="tiemposDescanso">
+                        Corto: <input type="number" value=15 id="tiempoDescansoCorto" width="50%" onchange="descansoCorto = formulario['tiempoDescansoCorto'].value - 1;" /> <br/> Largo: <input type="number" value=30 id="tiempoDescansoLargo" onchange="descansoLargo = formulario['tiempoDescansoLargo'].value - 1;"
+                        />
+                    </div>
+                    <br/> <input type="button" value="Empezar" id="empezar" onclick="setInterval(mostrarRelojEstudio, 1000);" />
+                </form>
+            </div>
+
+            <div id='hora'>
+            </div>
+            <div id='botones'>
+                <div id='pausa'></div>
+                <div id='stop'></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/reloj.js"></script>
+</body>
+
+</html>
