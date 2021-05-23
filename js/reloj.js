@@ -28,7 +28,7 @@ const mostrarRelojEstudio = () => {
         document.getElementById('estado').innerHTML = 'ESTUDIANDO';
     };
     if (segEstudio == 0) {
-        segEstudio = 59;
+        segEstudio = 2;
         if (minEstudio != 0) {
             --minEstudio;
         } else {
@@ -40,7 +40,7 @@ const mostrarRelojEstudio = () => {
                     segEstudio = 59;
                 } else {
                     minEstudio = descansoCorto;
-                    segEstudio = 59;
+                    segEstudio = 2;
                 };
                 document.getElementById('alarma').innerHTML = '<iframe src="audio/halloween_theme.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>';
                 descanso = true;
