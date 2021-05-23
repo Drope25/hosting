@@ -33,6 +33,7 @@ const mostrarRelojEstudio = () => {
             --minEstudio;
         } else {
             if (!descanso) {
+                alert('Tiempo de estudio terminado');
                 document.getElementById('hora').innerHTML = 'Tiempo de estudio terminado';
                 document.getElementById('estado').innerHTML = 'DESCANSANDO';
                 if ((noSesion + 1) % 4 == 0) {
@@ -46,6 +47,7 @@ const mostrarRelojEstudio = () => {
                 descanso = true;
                 ++noSesion;
             } else {
+                alert('Tiempo de descnaso terminado');
                 document.getElementById('hora').innerHTML = 'Tiempo de Descanso terminado';
                 minEstudio = tiempoEstudio;
                 segEstudio = 59;
