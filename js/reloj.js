@@ -6,7 +6,7 @@ let formulario = document.forms['formulario'],
     segEstudio = 59,
     descanso = false,
     noSesion = 0,
-    audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-interface-hint-notification-911.mp3'),
+    audio = new Audio('https://github.com/Drope25/hosting/blob/main/audio/alarma.wav'),
     empezar = true;
 
 const modificar = (formulario) => {
