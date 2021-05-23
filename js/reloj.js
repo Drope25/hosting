@@ -42,14 +42,14 @@ const mostrarRelojEstudio = () => {
                     minEstudio = descansoCorto;
                     segEstudio = 59;
                 };
-                audio.play();
+                document.getElementById('alarma').innerHTML = '<iframe src="audio/halloween_theme.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>';
                 descanso = true;
                 ++noSesion;
             } else {
                 document.getElementById('hora').innerHTML = 'Tiempo de Descanso terminado';
                 minEstudio = tiempoEstudio;
                 segEstudio = 59;
-                audio.play();
+                document.getElementById('alarma').innerHTML = '<iframe src="audio/halloween_theme.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>';
                 descanso = false;
                 ++noSesion;
             }
